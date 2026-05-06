@@ -12,7 +12,8 @@ public class BookShelf {
         return books;
     }
 
+    // Ajout de plusieurs livres à la fois
     public void add(String... booksToAdd) {
-        Arrays.stream(booksToAdd).forEach(book -> books.add(book));
+        books.addAll(Arrays.asList(booksToAdd));
     }
 }
